@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  position: relative;
+  font-family:'yg-jalnan';
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(152deg, rgba(214,211,211,1) 0%, rgba(255,255,255,1) 100%);
+  margin: 0px;
+}
+
+@keyframes shakeIt_first{
+  0%, 60%{
+    transform: rotate(0deg) translateY(120px);
+  }
+  20%, 45% {
+    transform: rotate(2deg) translateY(120px);
+  }
+  10%, 30% {
+    transform: rotate(-2deg) translateY(120px);
+  }
+}
+
+@keyframes shakeIt_second{
+  0%, 60%{
+    transform: rotate(-8deg);
+  }
+  20%, 45% {
+    transform: rotate(-6deg);
+  }
+  10%, 30% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes shakeIt_third{
+  0%, 60%{
+    transform: rotate(4deg);
+  }
+  20%, 45% {
+    transform: rotate(6deg);
+  }
+  10%, 30% {
+    transform: rotate(2deg);
+  }
+}
+
+.cards {
+  cursor: pointer;
+  padding: 10px;
+  width: 290px;
+  height: 300px;
+  background-color: white;
+  }
+
+
+.first {
+  position: absolute;
+  top: -10px;
+  left: 650px;
+  transform: translateY(120px) rotate(1.5deg);
+}
+
+.first:hover {
+  animation-name: shakeIt_first;
+  animation-duration: 3000ms;
+}
+
+.second {
+  position: absolute;
+  top: 400px;
+  left: 300px;
+  transform: rotate(-8deg);
+}
+
+.second:hover {
+  animation-name: shakeIt_second;
+  animation-duration: 3000ms;
+}
+
+.third {
+  position: absolute;
+  top: 400px;
+  left: 1000px;
+  transform: rotate(4deg);
+}
+
+.third:hover {
+  animation-name: shakeIt_third;
+  animation-duration: 3000ms;
+}
+
+.tape {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  transform: rotate(-20deg) translate(10px,-30px);
+  background-color: #ECECEC;
+  width: 80px;
+  height: 40px;
+  z-index: 1;
+}
+
+.second-tape {
+  transform: rotate(60deg) translate(-35px, -10px);
+}
+
+.third-tape {
+  transform: rotate(-45deg) translate(20px, -20px);
+}
+
+#first__img {
+  transform: translate(4.5px, -36px);
+  width: 260px;
+  height: 250px;
+}
+
+#second__img {
+  transform: translate(4.5px, -36px);
+  width: 260px;
+  height: 250px;
+}
+
+#third__img {
+  transform: translate(50px, 0px);
+  width: 150px;
+  height: 150px;
+}
+
+.card__content {
+  display: inline-block;
+  font-size: 11px;
+  transform: translate(100px, -40px);
+}
+
